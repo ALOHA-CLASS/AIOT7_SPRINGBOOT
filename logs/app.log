@@ -1,0 +1,274 @@
+2026-09-09T10:29:47.913+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.CrudApplication           : Starting CrudApplication using Java 23.0.2 with PID 10348 (C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\crud-aop\bin\main started by Admin in C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT)
+2026-09-09T10:29:47.917+09:00 DEBUG 10348 --- [crud-aop] [restartedMain] com.aloha.crud.CrudApplication           : Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-09-09T10:29:47.918+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.CrudApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-09T10:29:48.076+09:00  INFO 10348 --- [crud-aop] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-09T10:29:48.092+09:00  INFO 10348 --- [crud-aop] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-09T10:29:49.941+09:00  INFO 10348 --- [crud-aop] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-09T10:29:49.967+09:00  INFO 10348 --- [crud-aop] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-09T10:29:49.974+09:00  INFO 10348 --- [crud-aop] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-09T10:29:50.076+09:00  INFO 10348 --- [crud-aop] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1982 ms
+2026-09-09T10:29:51.926+09:00  INFO 10348 --- [crud-aop] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-09T10:29:51.936+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.CrudApplication           : Started CrudApplication in 4.976 seconds (process running for 6.049)
+2026-09-09T10:29:54.831+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : ==================================================
+2026-09-09T10:29:54.832+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : [@Around] 메서드 실행
+2026-09-09T10:29:54.833+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : ==================================================
+2026-09-09T10:29:54.834+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : [@Before] 메서드 실행 전
+2026-09-09T10:29:54.834+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : --------------------------------------------------
+2026-09-09T10:29:54.835+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : target : com.aloha.crud.service.OrderServiceImpl@6bf17c2a
+2026-09-09T10:29:54.836+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : signature : List com.aloha.crud.service.OrderServiceImpl.list()
+2026-09-09T10:29:54.838+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : args : []
+2026-09-09T10:29:54.838+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : 현재 시간 : 2026-09-09T10:29:54.838189200
+2026-09-09T10:29:54.839+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : ==================================================
+2026-09-09T10:29:55.574+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : ==================================================
+2026-09-09T10:29:55.574+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : [@AfterThrowing] 예외 발생
+2026-09-09T10:29:55.574+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : --------------------------------------------------
+2026-09-09T10:29:55.574+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : target : com.aloha.crud.service.OrderServiceImpl@6bf17c2a
+2026-09-09T10:29:55.574+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : signature : List com.aloha.crud.service.OrderServiceImpl.list()
+2026-09-09T10:29:55.575+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : 예외 메시지 : java.lang.RuntimeException: DB 연결 실패
+2026-09-09T10:29:55.575+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : 예외 클래스 : RuntimeException
+2026-09-09T10:29:55.575+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : 예외 내용
+
+java.lang.RuntimeException: java.lang.RuntimeException: DB 연결 실패
+	at com.aloha.crud.dao.OrderRepository.list(OrderRepository.java:56) ~[main/:na]
+	at com.aloha.crud.service.OrderServiceImpl.list(OrderServiceImpl.java:32) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:48) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:82) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.aloha.crud.aop.LoggingAspect.around(LoggingAspect.java:177) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:648) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:630) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:96) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.aloha.crud.service.OrderServiceImpl$$SpringCGLIB$$0.list(<generated>) ~[main/:na]
+	at com.aloha.crud.controller.OrderController.list(OrderController.java:94) ~[main/:na]
+	at com.aloha.crud.controller.OrderController.start(OrderController.java:61) ~[main/:na]
+	at com.aloha.crud.CrudApplication.run(CrudApplication.java:50) ~[main/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:792) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:571) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:328) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.aloha.crud.CrudApplication.main(CrudApplication.java:34) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.RuntimeException: DB 연결 실패
+	at com.aloha.crud.dao.JDBConnection.getConnection(JDBConnection.java:52) ~[main/:na]
+	at com.aloha.crud.dao.OrderRepository.list(OrderRepository.java:34) ~[main/:na]
+	... 54 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'aloha'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:na]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:na]
+	at com.aloha.crud.dao.JDBConnection.getConnection(JDBConnection.java:48) ~[main/:na]
+	... 55 common frames omitted
+
+2026-09-09T10:29:55.587+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : ==================================================
+2026-09-09T10:29:55.588+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : ==================================================
+2026-09-09T10:29:55.588+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : [@After] 메서드 실행 종료
+2026-09-09T10:29:55.589+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : --------------------------------------------------
+2026-09-09T10:29:55.589+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : target : com.aloha.crud.service.OrderServiceImpl@6bf17c2a
+2026-09-09T10:29:55.589+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : signature : List com.aloha.crud.service.OrderServiceImpl.list()
+2026-09-09T10:29:55.589+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : ==================================================
+2026-09-09T10:29:55.589+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : 예외 발생 : java.lang.RuntimeException: DB 연결 실패
+2026-09-09T10:29:55.590+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : 실행 시간 : 757 ms
+2026-09-09T10:29:55.590+09:00  INFO 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.LoggingAspect         : ==================================================
+2026-09-09T10:29:55.591+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : ==================================================
+2026-09-09T10:29:55.592+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : [Exception AOP] 예외 발생
+2026-09-09T10:29:55.592+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : --------------------------------------------------
+2026-09-09T10:29:55.592+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : target : com.aloha.crud.service.OrderServiceImpl@6bf17c2a
+2026-09-09T10:29:55.593+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : signature : List com.aloha.crud.service.OrderServiceImpl.list()
+2026-09-09T10:29:55.593+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : args : {}
+2026-09-09T10:29:55.593+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : exception : RuntimeException
+2026-09-09T10:29:55.593+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : message : java.lang.RuntimeException: DB 연결 실패
+2026-09-09T10:29:55.593+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : 예외 상세 정보
+
+java.lang.RuntimeException: java.lang.RuntimeException: DB 연결 실패
+	at com.aloha.crud.dao.OrderRepository.list(OrderRepository.java:56) ~[main/:na]
+	at com.aloha.crud.service.OrderServiceImpl.list(OrderServiceImpl.java:32) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:48) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:82) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.aloha.crud.aop.LoggingAspect.around(LoggingAspect.java:177) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:648) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:630) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:96) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.aloha.crud.service.OrderServiceImpl$$SpringCGLIB$$0.list(<generated>) ~[main/:na]
+	at com.aloha.crud.controller.OrderController.list(OrderController.java:94) ~[main/:na]
+	at com.aloha.crud.controller.OrderController.start(OrderController.java:61) ~[main/:na]
+	at com.aloha.crud.CrudApplication.run(CrudApplication.java:50) ~[main/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:792) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:571) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:328) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.aloha.crud.CrudApplication.main(CrudApplication.java:34) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.RuntimeException: DB 연결 실패
+	at com.aloha.crud.dao.JDBConnection.getConnection(JDBConnection.java:52) ~[main/:na]
+	at com.aloha.crud.dao.OrderRepository.list(OrderRepository.java:34) ~[main/:na]
+	... 54 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'aloha'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:na]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:na]
+	at com.aloha.crud.dao.JDBConnection.getConnection(JDBConnection.java:48) ~[main/:na]
+	... 55 common frames omitted
+
+2026-09-09T10:29:55.599+09:00 ERROR 10348 --- [crud-aop] [restartedMain] com.aloha.crud.aop.ExceptionAspect       : ==================================================
+2026-09-09T10:29:55.603+09:00  INFO 10348 --- [crud-aop] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-09-09T10:29:55.631+09:00 ERROR 10348 --- [crud-aop] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.RuntimeException: java.lang.RuntimeException: DB 연결 실패
+	at com.aloha.crud.dao.OrderRepository.list(OrderRepository.java:56) ~[main/:na]
+	at com.aloha.crud.service.OrderServiceImpl.list(OrderServiceImpl.java:32) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:48) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:82) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.aloha.crud.aop.LoggingAspect.around(LoggingAspect.java:177) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:648) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:630) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:96) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.9.jar:7.0.9]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.9.jar:7.0.9]
+	at com.aloha.crud.service.OrderServiceImpl$$SpringCGLIB$$0.list(<generated>) ~[main/:na]
+	at com.aloha.crud.controller.OrderController.list(OrderController.java:94) ~[main/:na]
+	at com.aloha.crud.controller.OrderController.start(OrderController.java:61) ~[main/:na]
+	at com.aloha.crud.CrudApplication.run(CrudApplication.java:50) ~[main/:na]
+	at org.springframework.boot.SpringApplication.lambda$callRunner$1(SpringApplication.java:792) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.util.function.ThrowingConsumer$1.acceptWithException(ThrowingConsumer.java:82) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingConsumer.accept(ThrowingConsumer.java:60) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.function.ThrowingConsumer$1.accept(ThrowingConsumer.java:86) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:800) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:791) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.lambda$callRunners$0(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[na:na]
+	at java.base/java.util.stream.SortedOps$SizedRefSortingSink.end(SortedOps.java:357) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:571) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[na:na]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:265) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:636) ~[na:na]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:776) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:328) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.aloha.crud.CrudApplication.main(CrudApplication.java:34) ~[main/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.RuntimeException: DB 연결 실패
+	at com.aloha.crud.dao.JDBConnection.getConnection(JDBConnection.java:52) ~[main/:na]
+	at com.aloha.crud.dao.OrderRepository.list(OrderRepository.java:34) ~[main/:na]
+	... 54 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'aloha'@'localhost' (using password: YES)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:682) ~[java.sql:na]
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:230) ~[java.sql:na]
+	at com.aloha.crud.dao.JDBConnection.getConnection(JDBConnection.java:48) ~[main/:na]
+	... 55 common frames omitted
+
+2026-09-09T10:29:55.645+09:00  INFO 10348 --- [crud-aop] [restartedMain] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-09T10:29:55.684+09:00  INFO 10348 --- [crud-aop] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete

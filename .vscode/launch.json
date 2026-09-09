@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-CrudApplication<crud-aop>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aloha.crud.CrudApplication",
+      "projectName": "crud-aop",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=50751 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=crud-aop"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-CrudApplication<crud-log>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aloha.crud.CrudApplication",
+      "projectName": "crud-log",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
