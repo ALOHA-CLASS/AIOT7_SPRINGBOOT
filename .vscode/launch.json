@@ -40,6 +40,16 @@
       "projectName": "jpa-map",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-JpaApplication<jpa-map-test>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aloha.jpa.JpaApplication",
+      "projectName": "jpa-map-test",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }
