@@ -109,6 +109,7 @@ public class OrderTest {
 
     assertThat(selectedOrder).isNotNull();
     // assertThat(selectedOrder.getOrderItems()).hasSize(orderItemCount);
+    log.info("#######################################################");
     log.info("주문항목 리스트 : {}", selectedOrder.getOrderItems());
 
     assertThat(selectedOrder.getTotalAmount())

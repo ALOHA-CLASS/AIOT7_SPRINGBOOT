@@ -48,4 +48,23 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+    testLogging {
+
+        // 테스트 결과 출력
+        // passed        : 성공한 테스트 출력
+        // failed        : 실패한 테스트 출력
+        // skipped       : 건너뛴 테스트 출력
+        // standardOut   : 테스트에서 System.out으로 출력한 내용
+        // standardError : 테스트에서 System.err로 출력한 내용
+        events "passed", "failed", "skipped", "standardOut", "standardError"
+
+        // 테스트에서 발생한 표준 출력(System.out)과
+        // 표준 오류(System.err)를 콘솔에 출력
+        // → log.info() 등의 테스트 실행 로그를 확인할 때 사용
+        showStandardStreams = true
+
+        // 테스트 실패 시 예외 정보를 전체 형태로 출력
+        // → 예외 메시지뿐만 아니라 Stack Trace까지 자세하게 확인
+        exceptionFormat "full"
+    }
 }
