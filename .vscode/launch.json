@@ -60,6 +60,16 @@
       "projectName": "request",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-ResponseApplication<response>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aloha.response.ResponseApplication",
+      "projectName": "response",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }

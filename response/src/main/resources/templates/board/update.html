@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 수정</title>
+</head>
+<body>
+  <h1>게시글 수정</h1>
+  <form action="/board/update" method="post" id="form">
+      <input type="hidden" name="no" th:value="${board.no}">
+      <table border="1" th:object="${board}">
+          <tr>
+              <td>제목</td>
+              <td>
+                  <!-- <input type="text" name="title" th:value="${board.title}" /> -->
+                  <!-- <input type="text" name="title" th:value="*{title}" /> -->
+                  <input type="text" th:field="*{title}" />
+                  <!-- ⭐ th:field="*{변수명}" ➡ id="변수명" name="변수명" 까지 자동 렌더링 -->
+              </td>
+          </tr>
+          <tr>
+              <td>작성자</td>
+              <td>
+                  <!-- <input type="text" name="writer" th:value="${board.writer}" /> -->
+                  <!-- <input type="text" name="writer" th:value="*{writer}" /> -->
+                  <input type="text" th:field="*{writer}" />
+              </td>
+          </tr>
+          <tr>
+              <td colspan="2">
+                  <!-- <textarea name="content" rows="5" cols="40" th:text="${board.content}"></textarea> -->
+                  <textarea rows="5" cols="40" th:field="*{content}"></textarea>
+              </td>
+          </tr>
+          <tr>
+              <td colspan="2" align="right">
+                  <button type="submit">수정</button>
+                  <button type="button" onclick="update()">수정</button>
+                  <button type="button" onclick="remove()">삭제</button>
+              </td>
+          </tr>
+      </table>
+  </form>
+  <div>
+      <!-- /board/insert?error ➡ ${param.error} -->
+      <th:block th:if="${ param.error }">
+          <span style="color: red;">게시글 수정 실패!</span>
+      </th:block>
+  </div>
+  <h1 th:text="${param.error}"></h1>
+</body>
+</html>

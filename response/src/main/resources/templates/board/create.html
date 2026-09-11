@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시글 등록</title>
+</head>
+<body>
+  <h1>게시글 등록</h1>
+  <form action="/board/create" method="post">
+    <table border="1">
+        <tr>
+            <td>제목</td>
+            <td>
+                <input type="text" name="title" />
+            </td>
+        </tr>
+        <tr>
+            <td>작성자</td>
+            <td>
+                <input type="text" name="writer" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <textarea name="content" rows="5" cols="40"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <button type="submit">등록</button>
+            </td>
+        </tr>
+    </table>
+  </form>
+  <div>
+      <!-- /board/create?error ➡ ${param.error} -->
+      <th:block th:if="${ param.error }">
+          <span style="color: red;">게시글 등록 실패!</span>
+      </th:block>
+  </div>
+  <h1 th:text="${param.error}"></h1>
+</body>
+</html>
