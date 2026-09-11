@@ -104,16 +104,18 @@ public class OrderTest {
         expectedTotalAmount += PRODUCT_PRICES[i] * ORDER_ITEM_QUANTITIES[i];
     }
 
-    Orders selectedOrder =
-            orderService.select(savedOrder.getNo());
-
-    assertThat(selectedOrder).isNotNull();
-    // assertThat(selectedOrder.getOrderItems()).hasSize(orderItemCount);
-    log.info("#######################################################");
+    Orders selectedOrder = orderService.select(savedOrder.getNo());
+    // 생성된 주문의 주문번호 확인
+    log.info("생성된 주문번호 : {}", savedOrder.getNo());
+    // 조회한 주문 정보 확인
+    log.info("조회한 주문 : {}", selectedOrder);
+    // 생성된 주문의 주문항목 리스트 확인
     log.info("주문항목 리스트 : {}", selectedOrder.getOrderItems());
 
-    assertThat(selectedOrder.getTotalAmount())
-            .isEqualTo(expectedTotalAmount);
+    assertThat(selectedOrder).isNotNull();
+    // ⭐ 검증 안 된 문제
+    // assertThat(selectedOrder.getOrderItems()).hasSize(orderItemCount);
+    assertThat(selectedOrder.getTotalAmount()).isEqualTo(expectedTotalAmount);
 
     // 5. 주문상품 조회
     OrderItem selectedItem =
