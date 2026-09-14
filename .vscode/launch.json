@@ -70,6 +70,26 @@
       "projectName": "response",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-RestApplication<rest>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aloha.rest.RestApplication",
+      "projectName": "rest",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-MvcApplication<mvc>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aloha.mvc.MvcApplication",
+      "projectName": "mvc",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }

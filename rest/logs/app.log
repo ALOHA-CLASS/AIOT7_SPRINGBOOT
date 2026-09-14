@@ -1,0 +1,226 @@
+2026-09-14T11:07:21.030+09:00  INFO 19584 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Starting RestApplication using Java 17.0.12 with PID 19584 (C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest\bin\main started by Admin in C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest)
+2026-09-14T11:07:21.034+09:00  INFO 19584 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-14T11:07:21.159+09:00  INFO 19584 --- [rest] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-14T11:07:21.162+09:00  INFO 19584 --- [rest] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-14T11:07:22.412+09:00  INFO 19584 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-14T11:07:22.543+09:00  INFO 19584 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 112 ms. Found 1 JPA repository interface.
+2026-09-14T11:07:23.811+09:00  INFO 19584 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-14T11:07:23.866+09:00  INFO 19584 --- [rest] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-14T11:07:23.867+09:00  INFO 19584 --- [rest] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-14T11:07:24.014+09:00  INFO 19584 --- [rest] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2850 ms
+2026-09-14T11:07:24.604+09:00  INFO 19584 --- [rest] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-14T11:07:24.726+09:00  INFO 19584 --- [rest] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-14T11:07:26.043+09:00  INFO 19584 --- [rest] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-14T11:07:26.170+09:00  INFO 19584 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-14T11:07:26.505+09:00  INFO 19584 --- [rest] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@607b66bc
+2026-09-14T11:07:26.510+09:00  INFO 19584 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-14T11:07:26.649+09:00  INFO 19584 --- [rest] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/aloha?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: aloha/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-14T11:07:28.062+09:00  INFO 19584 --- [rest] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-14T11:07:28.276+09:00  INFO 19584 --- [rest] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:07:28.482+09:00  INFO 19584 --- [rest] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-14T11:07:28.752+09:00  WARN 19584 --- [rest] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-14T11:07:29.601+09:00  INFO 19584 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-14T11:07:29.611+09:00  INFO 19584 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Started RestApplication in 9.621 seconds (process running for 10.962)
+2026-09-14T11:09:21.675+09:00  INFO 19584 --- [rest] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-14T11:09:21.680+09:00  INFO 19584 --- [rest] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-14T11:09:21.777+09:00  INFO 19584 --- [rest] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-14T11:09:21.780+09:00  INFO 19584 --- [rest] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:09:21.785+09:00  INFO 19584 --- [rest] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-14T11:09:21.809+09:00  INFO 19584 --- [rest] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-14T11:09:21.973+09:00  INFO 19584 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Starting RestApplication using Java 17.0.12 with PID 19584 (C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest\bin\main started by Admin in C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest)
+2026-09-14T11:09:21.975+09:00  INFO 19584 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-14T11:09:22.359+09:00  INFO 19584 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-14T11:09:22.412+09:00  INFO 19584 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2026-09-14T11:09:22.564+09:00  INFO 19584 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-14T11:09:22.567+09:00  INFO 19584 --- [rest] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-14T11:09:22.572+09:00  INFO 19584 --- [rest] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-14T11:09:22.606+09:00  INFO 19584 --- [rest] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 627 ms
+2026-09-14T11:09:22.662+09:00  INFO 19584 --- [rest] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-14T11:09:22.745+09:00  INFO 19584 --- [rest] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-14T11:09:22.747+09:00  INFO 19584 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-14T11:09:22.757+09:00  INFO 19584 --- [rest] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@17f3ef8b
+2026-09-14T11:09:22.758+09:00  INFO 19584 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-14T11:09:22.764+09:00  INFO 19584 --- [rest] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/aloha?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: aloha/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-14T11:09:22.844+09:00  INFO 19584 --- [rest] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-14T11:09:22.857+09:00  INFO 19584 --- [rest] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:09:22.940+09:00  WARN 19584 --- [rest] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-14T11:09:23.130+09:00  INFO 19584 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-14T11:09:23.136+09:00  INFO 19584 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Started RestApplication in 1.222 seconds (process running for 124.488)
+2026-09-14T11:09:23.142+09:00  INFO 19584 --- [rest] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-14T11:14:47.828+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Starting RestApplication using Java 17.0.12 with PID 17144 (C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest\bin\main started by Admin in C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest)
+2026-09-14T11:14:47.835+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-14T11:14:48.022+09:00  INFO 17144 --- [rest] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-09-14T11:14:48.023+09:00  INFO 17144 --- [rest] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-09-14T11:14:49.307+09:00  INFO 17144 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-14T11:14:49.457+09:00  INFO 17144 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 1 JPA repository interface.
+2026-09-14T11:14:50.307+09:00  INFO 17144 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-14T11:14:50.342+09:00  INFO 17144 --- [rest] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-14T11:14:50.342+09:00  INFO 17144 --- [rest] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-14T11:14:50.440+09:00  INFO 17144 --- [rest] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2403 ms
+2026-09-14T11:14:50.882+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-14T11:14:51.055+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-09-14T11:14:52.343+09:00  INFO 17144 --- [rest] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-14T11:14:52.428+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-09-14T11:14:52.749+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7fbc5b9f
+2026-09-14T11:14:52.752+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-09-14T11:14:52.874+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/aloha?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: aloha/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-14T11:14:54.351+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-14T11:14:54.415+09:00  INFO 17144 --- [rest] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:14:54.551+09:00  INFO 17144 --- [rest] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-09-14T11:14:54.793+09:00  WARN 17144 --- [rest] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-14T11:14:55.501+09:00  INFO 17144 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-14T11:14:55.515+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Started RestApplication in 8.941 seconds (process running for 10.139)
+2026-09-14T11:15:25.030+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-14T11:15:25.031+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-14T11:15:25.033+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-09-14T11:17:12.336+09:00  WARN 17144 --- [rest] [http-nio-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'PUT' is not supported]
+2026-09-14T11:18:07.055+09:00  INFO 17144 --- [rest] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-14T11:18:07.071+09:00  INFO 17144 --- [rest] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-14T11:18:07.477+09:00  INFO 17144 --- [rest] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-14T11:18:07.481+09:00  INFO 17144 --- [rest] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:18:07.485+09:00  INFO 17144 --- [rest] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-09-14T11:18:07.500+09:00  INFO 17144 --- [rest] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-09-14T11:18:07.759+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Starting RestApplication using Java 17.0.12 with PID 17144 (C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest\bin\main started by Admin in C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest)
+2026-09-14T11:18:07.761+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-14T11:18:08.553+09:00  INFO 17144 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-14T11:18:08.640+09:00  INFO 17144 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2026-09-14T11:18:09.025+09:00  INFO 17144 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-14T11:18:09.028+09:00  INFO 17144 --- [rest] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-14T11:18:09.186+09:00  INFO 17144 --- [rest] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-14T11:18:09.597+09:00  INFO 17144 --- [rest] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1819 ms
+2026-09-14T11:18:09.856+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-14T11:18:10.042+09:00  INFO 17144 --- [rest] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-14T11:18:10.057+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-09-14T11:18:10.071+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@24974daf
+2026-09-14T11:18:10.072+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-09-14T11:18:10.075+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/aloha?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: aloha/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-14T11:18:10.228+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-14T11:18:10.255+09:00  INFO 17144 --- [rest] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:18:10.517+09:00  WARN 17144 --- [rest] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-14T11:18:10.694+09:00  INFO 17144 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-14T11:18:10.776+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Started RestApplication in 3.123 seconds (process running for 205.4)
+2026-09-14T11:18:10.833+09:00  INFO 17144 --- [rest] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-14T11:18:19.638+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-14T11:18:19.641+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-14T11:18:19.642+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-09-14T11:19:23.141+09:00  INFO 17144 --- [rest] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-14T11:19:23.145+09:00  INFO 17144 --- [rest] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-14T11:19:23.244+09:00  INFO 17144 --- [rest] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-14T11:19:23.246+09:00  INFO 17144 --- [rest] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:19:23.246+09:00  INFO 17144 --- [rest] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-09-14T11:19:23.248+09:00  INFO 17144 --- [rest] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-09-14T11:19:23.384+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Starting RestApplication using Java 17.0.12 with PID 17144 (C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest\bin\main started by Admin in C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest)
+2026-09-14T11:19:23.385+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-14T11:19:23.706+09:00  INFO 17144 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-14T11:19:23.738+09:00  INFO 17144 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 1 JPA repository interface.
+2026-09-14T11:19:23.900+09:00  INFO 17144 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-14T11:19:23.902+09:00  INFO 17144 --- [rest] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-14T11:19:23.903+09:00  INFO 17144 --- [rest] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-14T11:19:23.938+09:00  INFO 17144 --- [rest] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 550 ms
+2026-09-14T11:19:24.003+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-14T11:19:24.053+09:00  INFO 17144 --- [rest] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-14T11:19:24.056+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-09-14T11:19:24.059+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@12460c15
+2026-09-14T11:19:24.060+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-09-14T11:19:24.063+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/aloha?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: aloha/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-14T11:19:24.140+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-14T11:19:24.156+09:00  INFO 17144 --- [rest] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:19:24.229+09:00  WARN 17144 --- [rest] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-14T11:19:24.368+09:00  INFO 17144 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-14T11:19:24.375+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Started RestApplication in 1.022 seconds (process running for 278.999)
+2026-09-14T11:19:24.376+09:00  INFO 17144 --- [rest] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-14T11:19:49.485+09:00  INFO 17144 --- [rest] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-09-14T11:19:49.487+09:00  INFO 17144 --- [rest] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-14T11:19:49.589+09:00  INFO 17144 --- [rest] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-14T11:19:49.591+09:00  INFO 17144 --- [rest] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:19:49.592+09:00  INFO 17144 --- [rest] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-09-14T11:19:49.594+09:00  INFO 17144 --- [rest] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-09-14T11:19:49.730+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Starting RestApplication using Java 17.0.12 with PID 17144 (C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest\bin\main started by Admin in C:\ALOHA\GITHUB\AIOT7_SPRINGBOOT\rest)
+2026-09-14T11:19:49.731+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : No active profile set, falling back to 1 default profile: "default"
+2026-09-14T11:19:50.001+09:00  INFO 17144 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-14T11:19:50.024+09:00  INFO 17144 --- [rest] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2026-09-14T11:19:50.150+09:00  INFO 17144 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-14T11:19:50.152+09:00  INFO 17144 --- [rest] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-14T11:19:50.152+09:00  INFO 17144 --- [rest] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-14T11:19:50.188+09:00  INFO 17144 --- [rest] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 455 ms
+2026-09-14T11:19:50.222+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-14T11:19:50.280+09:00  INFO 17144 --- [rest] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-14T11:19:50.281+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-09-14T11:19:50.286+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@213214ea
+2026-09-14T11:19:50.287+09:00  INFO 17144 --- [rest] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-09-14T11:19:50.289+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/aloha?serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true&useSSL=false]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.46
+	Default catalog/schema: aloha/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-14T11:19:50.330+09:00  INFO 17144 --- [rest] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-14T11:19:50.343+09:00  INFO 17144 --- [rest] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-14T11:19:50.398+09:00  WARN 17144 --- [rest] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-14T11:19:50.496+09:00  INFO 17144 --- [rest] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-14T11:19:50.499+09:00  INFO 17144 --- [rest] [restartedMain] com.aloha.rest.RestApplication           : Started RestApplication in 0.801 seconds (process running for 305.124)
+2026-09-14T11:19:50.500+09:00  INFO 17144 --- [rest] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-14T11:20:28.063+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-14T11:20:28.063+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-14T11:20:28.064+09:00  INFO 17144 --- [rest] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
