@@ -7,5 +7,37 @@
 </head>
 <body>
   <h1>게시글 목록</h1>
+  <div>
+    <a href="/posts/create">글쓰기</a>
+  </div>
+
+  <table border="1">
+    <tr>
+      <th>번호</th>
+      <th>제목</th>
+      <th>작성자</th>
+      <th>등록일자</th>
+      <th>수정일자</th>
+    </tr>
+    <th:block th:each="post : ${posts}">   
+      <tr>  
+        <td th:text="${post.no}"></td>
+        <td>
+          <a th:href="|/posts/${post.id}|" th:text="${post.title}">제목</a>
+        </td>
+        <td th:text="${post.writer}"></td>
+        <td>
+          <span th:text="${ #dates.format( post.createdAt, 'yyyy-MM-dd HH:mm:ss') }">
+            등록일자
+          </span>
+        </td>
+        <td>
+          <span th:text="${ #dates.format( post.updatedAt, 'yyyy-MM-dd HH:mm:ss') }">
+            수정일자
+          </span>
+        </td>
+      </tr>
+    </th:block>
+  </table>
 </body>
 </html>

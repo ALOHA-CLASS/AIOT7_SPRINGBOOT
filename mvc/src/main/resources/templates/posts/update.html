@@ -7,5 +7,42 @@
 </head>
 <body>
   <h1>게시글 수정</h1>
+  <div>
+    <form id="form" action="/posts/update" method="post">
+      <!-- ⭐ 게시글 수정 시, no 또는 id 도 같이 포함하여 전송 -->
+      <!-- <input type="hidden" name="no" th:value="${post.no}" > -->
+      <input type="hidden" name="id" th:value="${post.id}" >
+      <div>
+        <label for="title">제목</label>
+        <input type="text" id="title" name="title" th:value="${post.title}">
+      </div>
+      <div>
+        <label for="writer">작성자</label>
+        <input type="text" id="writer" name="writer" th:value="${post.writer}">
+      </div>
+      <div>
+        <label for="content">내용</label>
+        <textarea name="content" id="content" rows="5" cols="40" th:text="${post.content}"></textarea>
+      </div>
+      <div>
+        <button type="submit">수정</button>
+        <button onclick="remove()">삭제</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // 삭제 요청
+    function remove() {
+      // 폼
+      let $form = document.getElementById("form")
+      // 삭제 확인
+      let check = confirm("정말로 삭제하시겠습니까?")
+      if( check ) {
+        $form.action = '/posts/delete'
+        $form.submit()  // 폼 전송
+      }
+    }
+  </script>
 </body>
 </html>

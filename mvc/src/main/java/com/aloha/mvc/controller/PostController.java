@@ -1,6 +1,9 @@
 package com.aloha.mvc.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,10 +30,17 @@ public class PostController {
 
   /**
    * 게시글 목록
+   * ⭐ Model : Controller 에서 View 데이터를 전달하기 위한 객체
+   * ⚡ 컨트롤러 메소드에 매개변수로 객체를 선언하면,
+   *    스프링이 객체를 생성하여 주입해준다.
    * @return
    */
   @GetMapping("")
-  public String list() {
+  public String list(Model model) {
+    // 게시글 목록 데이터 요청
+    List<Posts> posts = postService.list();
+    // 모델에 "posts" 라는 이름으로 등록 : View 에서 ${posts} 로 사용
+    model.addAttribute("posts", posts);
     return "posts/list";
   }
 
@@ -40,8 +50,11 @@ public class PostController {
    * @return
    */
   @GetMapping("/{id}")
-  public String read(@PathVariable("id") String id) {
-    // TODO: 데이터 조회
+  public String read(@PathVariable("id") String id, Model model) {
+    // 데이터 조회
+    Posts post = postService.selectById(id);
+    // 모델에 데이터 등록
+    model.addAttribute("post", post);
     return "posts/read";
   }
 
@@ -61,8 +74,15 @@ public class PostController {
    */
   @PostMapping("")
   public String createPost(Posts post) {
-    // TODO: 게시글 등록 처리
-    return "redirec:/posts";
+    // 게시글 등록 처리
+    Posts newPost = postService.create(post);
+
+    // 등록 성공 시, 게시글 목록으로 이동
+    if( newPost != null )
+      return "redirect:/posts";
+
+    // 등록 실패 시, 게시글 등록으로 다시 이동
+    return "redirect:/posts/create?error";
   }
   
   /**
@@ -71,8 +91,11 @@ public class PostController {
    * @return
    */
   @GetMapping("/{id}/update")
-  public String update(@PathVariable("id") String id) {
-    // TODO: 데이터 조회
+  public String update(@PathVariable("id") String id, Model model) {
+    // 데이터 조회
+    Posts post = postService.selectById(id);
+    // 모델에 데이터 등록
+    model.addAttribute("post", post);
     return "posts/update";
   }
 
@@ -83,8 +106,13 @@ public class PostController {
    */
   @PostMapping("/update")
   public String updatePost(Posts post) {
-    // TODO: 데이터 수정 처리
-    return "redirect:/posts";
+    // 데이터 수정 처리
+    Posts updatedPost = postService.updateById(post);
+    // 수정 성공 시, 게시글 목록으로 이동
+    if( updatedPost != null )
+      return "redirect:/posts";
+    // 수정 실패 시, 수정화면으로 다시 이동
+    return "redirect:/posts/" + post.getId() + "/update?error";
   }
   
   /**
@@ -94,8 +122,14 @@ public class PostController {
    */
   @PostMapping("/delete")
   public String delete(@RequestParam("id") String id) {
-    // TODO: 데이터 삭제 처리
-    return "redirect:/posts";
+    // 데이터 삭제 처리
+    boolean result = postService.deleteById(id);
+    // 삭제 성공 시, 게시글 목록으로 이동
+    if( result )
+      return "redirect:/posts";
+
+    // 삭제 실패 시, 다시 수정으로 이동
+    return "redirect:/posts/" + id + "/update?error";
   }
   
   
