@@ -8123,3 +8123,6 @@ This generated password is for development use only. Your security configuration
 2026-09-15T11:15:59.781+09:00  INFO 1188 --- [mvc] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
 2026-09-15T11:15:59.783+09:00  INFO 1188 --- [mvc] [restartedMain] com.aloha.mvc.MvcApplication             : Started MvcApplication in 0.532 seconds (process running for 7537.109)
 2026-09-15T11:15:59.784+09:00  INFO 1188 --- [mvc] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-15T11:16:01.003+09:00  INFO 1188 --- [mvc] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-12].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-15T11:16:01.016+09:00  INFO 1188 --- [mvc] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-15T11:16:01.017+09:00  INFO 1188 --- [mvc] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
