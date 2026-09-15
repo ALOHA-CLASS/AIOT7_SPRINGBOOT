@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반복문</title>
+  <style>
+    .odd {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <h1>타임리프 반복문</h1>
+
+  <h2>기본 반복 - th:each</h2>
+  <th:block th:each=" item : ${items} ">
+    <th:block th:text="${item}"></th:block>
+  </th:block>
+
+  <!-- #strings 유틸리티 객체를 사용하여. 묶어서 출력 -->
+  <!-- item1, item2, item3, item4, item5 -->
+  <h3 th:text="${ #strings.listJoin( items, ', ')}"></h3>
+
+  <hr>
+  <h2>반복 객체 - iterStat</h2>
+  <table border="1">
+    <tr>
+      <th>index</th>
+      <th>count</th>
+      <th>size</th>
+      <th>item</th>
+      <th>홀수</th>
+      <th>짝수</th>
+      <th>첫번째</th>
+      <th>마지막</th>
+    </tr>
+    <th:block th:each=" item, iterStat : ${items}">
+      <tr class="row" th:classappend="${ iterStat.odd ? 'odd' : 'even'}">
+        <td><th:block th:text="${iterStat.index}"></th:block></td>
+        <td><th:block th:text="${iterStat.count}"></th:block></td>
+        <td><th:block th:text="${iterStat.size}"></th:block></td>
+        <td><th:block th:text="${item}"></th:block></td>
+        <td><th:block th:text="${iterStat.odd}"></th:block></td>
+        <td><th:block th:text="${iterStat.even}"></th:block></td>
+        <td><th:block th:text="${iterStat.first}"></th:block></td>
+        <td><th:block th:text="${iterStat.last}"></th:block></td>
+      </tr>
+    </th:block>
+  </table>
+
+  <hr>
+  <h2>필터링 조건 - th:each</h2>
+  <th:block th:each="item : ${items}"
+            th:if="${ item == 'item1' }"
+            >
+    <th:block th:text="${item}"></th:block>
+  </th:block>
+  <br>
+  <th:block th:each="item : ${items}"
+            th:if="${ item.startsWith('i') }"
+            >
+    <th:block th:text="${item}"></th:block>
+  </th:block>
+  <br>
+  <th:block th:each="item : ${items}"
+            th:if="${ item.endsWith('3') }"
+            >
+    <th:block th:text="${item}"></th:block>
+  </th:block>
+  <br>
+  <th:block th:each="item, iterStat : ${items}"
+            th:if="${ iterStat.index < 3 }"
+            >
+    <th:block th:text="${item}"></th:block>
+  </th:block>
+  <br>
+  <hr>
+
+  <hr>
+  <h2>중첩 반복문</h2>
+  <table border="1">
+    <tr>
+      <th>no</th>
+      <th>username</th>
+      <th>name</th>
+      <th>auth</th>
+    </tr>
+    <th:block th:each=" user, iterStat : ${userList}">
+      <tr>
+        <td th:text="${ iterStat.count }"></td>
+        <td th:text="${ user.username }"></td>
+        <td th:text="${ user.name }"></td>
+        <td>
+          <th:block th:each=" auth, iterStat : ${user.authList} ">
+            <th:block th:if="${ auth.auth == 'ROLE_USER' }">사용자</th:block>
+            <th:block th:if="${ auth.auth == 'ROLE_ADMIN' }">관리자</th:block>
+            <th:block th:text="|${ auth.auth }|"></th:block>
+            <th:block th:if="${ !iterStat.last }">,</th:block>
+          </th:block>
+        </td>
+      </tr>
+    </th:block>
+  </table>
+
+  <div style="height: 500px;"></div>
+</body>
+</html>

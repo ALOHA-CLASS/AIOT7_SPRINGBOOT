@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>조건문</title>
+</head>
+<body>
+  <!-- 타임리프 블록 th:block -->
+
+  <!-- 타임리프 조건문 th:if -->
+  <!-- ############################################### -->
+  <h1>타임리프 조건문</h1>
+
+  <h2>th:if</h2>
+  <ul>
+    <li>th:if</li>
+    <li>th:else</li>
+  </ul>
+
+  <th:block th:if="${ person != null && person.age >= 20 }">
+    <h1 th:text="${ person.age }"></h1>
+  </th:block>
+
+  <!-- 문자열 비교 -->
+  <th:block th:if="${ person != null  && person.name == 'ALOHA' }">
+    <h1 th:text="${ person.name }"></h1>
+  </th:block>
+
+  <!-- #strings 유틸리티 객체를 사용한 문자열 비교 -->
+  <!-- #strings.equals( 문자열1, 문자열2 ) -->
+  <th:block th:if="${ person != null && #strings.equals( person.name, 'ALOHA' ) }">
+    <h1 th:text="${ person.name }"></h1>
+  </th:block>
+
+  <!-- 상위 블록에서 먼저 null 체크 -->
+  <th:block th:if="${ person != null }">
+    <th:block th:if="${ person.name == 'ALOHA' }">
+      <h1 th:text="${ person.name }"></h1>
+    </th:block>
+  </th:block>
+
+  <!-- 삼항 연산자를 이용한 null 체크 -->
+  <h1 th:text="${ person == null ? '테스트' : person.name }"></h1>
+
+  <!-- NULL 체크 -->
+  <th:block th:if="${ person != null and person.name == null }">
+    <h1>이름이 없습니다.</h1>
+  </th:block>
+
+  <th:block th:if="${ person?.name == null }">
+    <h1>이름이 없습니다.</h1>
+  </th:block>
+
+  <hr>
+  <h2>th:unless</h2>
+  <!-- th:unless="${ 조건문 }" -->
+  <!-- * 조건이 false 일 때, 블록 안에 내용을 출력한다 -->
+  <th:block th:unless="${ person == null || person.age < 20 }">
+    <!-- person != null && person >= 20 일 때 -->
+    <h1>20살 이상입니다.</h1>
+  </th:block>
+
+  <hr>
+  <h2>th:switch</h2>
+  <!--
+    <th:block th:switch="${ 변수, 수식 }">
+        <th:block th:case="값1">결과1</th:block>
+        <th:block th:case="값2">결과2</th:block>
+        <th:block th:case="값3">결과3</th:block>
+        <th:block th:case="*">default</th:block>
+    </th:block>
+  -->
+  <th:block th:switch="${ person.age }">
+    <th:block th:case="10">10살입니다</th:block>
+    <th:block th:case="20">20살입니다</th:block>
+    <th:block th:case="30">30살입니다</th:block>
+    <th:block th:case="*">기타</th:block>
+  </th:block>
+
+
+</body>
+</html>

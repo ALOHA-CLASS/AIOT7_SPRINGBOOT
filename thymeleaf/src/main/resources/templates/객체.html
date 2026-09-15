@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+</head>
+<body>
+  <h1>th:object</h1>
+  <!-- ⭐ th:object="${객체}" -->
+  <!-- - 상위 태그에서 객체를 등록하고, 하위 태그에서 *{변수} 형태로 접근 가능 -->
+  <div th:object="${loginUser}">
+    <ul>
+        <li th:text="*{no}"></li>
+        <li th:text="*{id}"></li>
+        <li th:text="*{username}"></li>
+        <li th:text="*{password}"></li>
+        <li th:text="*{name}"></li>
+        <li th:text="*{ #dates.format( createdAt, 'yyyy-MM-dd HH:mm:ss') }"></li>
+        <li th:text="*{ #dates.format( updatedAt, 'yyyy-MM-dd HH:mm:ss') }"></li>
+    </ul>
+  </div>
+
+  <hr>
+  <h2>th:object - form </h2>
+  <!-- - th:field="*{변수}" ➡ id, name, value 속성을 자동으로 생성 -->
+  <form action="" method="post" th:object="${loginUser}">
+      <input type="text" th:field="*{no}"> <br>
+      <input type="text" th:field="*{id}"> <br>
+      <input type="text" th:field="*{username}"> <br>
+      <input type="text" th:field="*{password}"> <br>
+      <input type="text" th:field="*{name}"> <br>
+
+      <input type="radio" id="male" value="남자" name="gender" 
+              th:checked="*{ gender == '남자'}">
+      <label for="male">남자</label>
+      <input type="radio" id="female" value="여자" name="gender" 
+              th:checked="*{ gender == '여자'}">
+      <label for="female">여자</label>
+      <br>
+
+      <!-- ⭐ select 에 th:field="*{type}" 사용하면, type 값과 일치하는 option 자동 선택 -->
+      <select th:field="*{type}">
+          <option value="사용자 타입" disabled>사용자 타입</option>
+          <option value="사용자">사용자</option>
+          <option value="관리자">관리자</option>
+          <!-- <option value="선택안함" th:selected="*{ type == null }">선택안함</option> -->
+          <!-- <option value="사용자" th:selected="*{ type == '사용자' }">사용자</option> -->
+          <!-- <option value="관리자" th:selected="*{ type == '관리자' }">관리자</option> -->
+      </select>
+      <br>
+
+      <input type="checkbox" name="authList" id="role_user" th:checked="${ loginUser.containsAuth('ROLE_USER') }">
+      <label for="role_user">ROLE_USER</label>
+      <input type="checkbox" name="authList" id="role_admin" th:checked="${ loginUser.containsAuth('ROLE_ADMIN') }">
+      <label for="role_admin">ROLE_ADMIN</label>
+      <br>
+
+      <input type="date" th:value="*{ #dates.format( createdAt, 'yyyy-MM-dd' ) }"   
+                          id="createdAt" name="createdAt"> <br>
+      <input type="date" th:value="*{ #dates.format( updatedAt, 'yyyy-MM-dd' ) }"   
+                          id="updatedAt" name="updatedAt"> <br>
+
+  </form>
+
+  <hr>
+  <!-- 세션 가져오기 -->
+  <h2>${session.loginUser}</h2>
+  <h3 th:text="${session.loginUser.name}"></h3>
+  <h3 th:text="${session.loginUser.username}"></h3>
+  <h3 th:text="${session.loginUser.password}"></h3>
+
+  <th:block th:if="${ session.loginUser != null }">
+      <button>로그아웃</button>
+  </th:block>
+  <th:block th:if="${ session.loginUser == null }">
+      <button>로그인</button>
+  </th:block>
+
+  <div style="height: 500px;"></div>
+</body>
+</html>
