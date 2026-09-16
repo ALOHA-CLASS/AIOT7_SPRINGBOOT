@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JPQL</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- fragments.html 영역파일을 불러와서 추가 -->
+    <div th:replace="~{fragments :: navbar}"></div>
+    
+    <main class="container py-5">
+        <h1 class="mb-2">JPA 쇼핑몰 실습</h1>
+        <p class="text-secondary mb-4">
+            Thymeleaf + Bootstrap + JPA + JPQL
+        </p>
+        <!-- 통계 카드 -->
+        <div class="row g-3 mb-4">
+        <!-- 회원 -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-secondary">회원</div>
+                    <h2 th:text="${userCount}">0</h2>
+                </div>
+            </div>
+        </div>
+        <!-- 상품 -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-secondary">상품</div>
+                    <h2 th:text="${productCount}">0</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- 장바구니 -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-secondary">장바구니</div>
+                    <h2 th:text="${cartCount}">0</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- 주문 -->
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="text-secondary">주문</div>
+                    <h2 th:text="${orderCount}">0</h2>
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+        <!-- 메뉴 -->
+        <div class="list-group">
+            <a href="/users"
+                class="list-group-item list-group-item-action"
+            >
+                회원 목록 → 장바구니 / 주문내역
+            </a>
+            <a href="/products"
+                class="list-group-item list-group-item-action"
+            >
+                상품 목록 → JPQL 검색
+            </a>
+        </div>
+
+    </main>
+</body>
+</html>

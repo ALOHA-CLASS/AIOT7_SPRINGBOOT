@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>회원 목록</title>
+      <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+      >
+</head>
+<body>
+         <!-- fragments.html 영역파일을 불러와서 추가 -->
+        <div th:replace="~{fragments :: navbar}"></div>
+      <main class="container py-5">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+              <h1>회원 목록</h1>
+              <form class="d-flex" method="get">
+                  <input
+                      class="form-control me-2"
+                      name="keyword"
+                      th:value="${keyword}"
+                      placeholder="이름 검색"
+                  >
+                  <button class="btn btn-dark w-50">
+                      검색
+                  </button>
+            </form>
+        </div>
+          <table class="table table-hover align-middle">
+              <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>사용자명</th>
+                      <th>이메일</th>
+                      <th>메뉴</th>
+                </tr>
+            </thead>
+              <tbody>
+                  <tr th:each="user : ${users}">
+                      <td th:text="${user.no}"></td>
+                      <td th:text="${user.username}"></td>
+                      <td th:text="${user.email}"></td>
+                      <td>
+                          <a
+                              class="btn btn-sm btn-outline-primary"
+                              th:href="@{/carts/{id}(id=${user.no})}"
+                          >
+                              장바구니
+                          </a>
+                          <a
+                              class="btn btn-sm btn-outline-secondary"
+                              th:href="@{/orders/{id}(id=${user.no})}"
+                          >
+                              주문내역
+                          </a>
+                    </td>
+                </tr>
+                  <!-- 회원이 없는 경우 -->
+                  <tr th:if="${#lists.isEmpty(users)}">
+                      <td
+                          colspan="4"
+                          class="text-center text-secondary py-4"
+                      >
+                          회원이 없습니다.
+                      </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

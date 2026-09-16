@@ -100,6 +100,16 @@
       "projectName": "thymeleaf",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-JpqlApplication<jpql>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aloha.jpql.JpqlApplication",
+      "projectName": "jpql",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }
