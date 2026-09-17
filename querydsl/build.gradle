@@ -1,0 +1,72 @@
+plugins {
+	id 'java'
+	id 'war'
+	id 'org.springframework.boot' version '4.1.1'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'com.aloha'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'com.mysql:mysql-connector-j'
+	annotationProcessor 'org.projectlombok:lombok'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat-runtime'
+	testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-thymeleaf-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+	testCompileOnly 'org.projectlombok:lombok'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	// querydsl
+	implementation 'com.querydsl:querydsl-jpa:5.1.0:jakarta'
+	annotationProcessor 'com.querydsl:querydsl-apt:5.1.0:jakarta' 
+	// querydsl-apt(JPAAnnotationProcessor)가 @Entity 등을 읽기 위해 필요 (annotationProcessor 클래스패스에는 자동으로 안 딸려옴)
+	annotationProcessor 'jakarta.persistence:jakarta.persistence-api'
+	annotationProcessor 'jakarta.annotation:jakarta.annotation-api'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+
+// QueryDSL(querydsl-apt) 등 annotation processor 산출물을 build/ 대신 bin/ 하위에 생성
+def generatedMainDir = file("$projectDir/bin/generated-sources/annotations")
+def generatedTestDir = file("$projectDir/bin/generated-test-sources/annotations")
+
+// IDE(JDT.LS 등)가 Gradle 소스셋 모델을 통해 생성 경로를 소스 폴더로 인식하도록 등록
+sourceSets {
+	main {
+		java {
+			srcDir generatedMainDir
+		}
+	}
+	test {
+		java {
+			srcDir generatedTestDir
+		}
+	}
+}
+
+compileJava {
+	options.generatedSourceOutputDirectory = generatedMainDir
+}
+compileTestJava {
+	options.generatedSourceOutputDirectory = generatedTestDir
+}

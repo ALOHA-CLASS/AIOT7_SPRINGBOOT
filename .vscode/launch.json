@@ -110,6 +110,16 @@
       "projectName": "jpql",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-QuerydslApplication<querydsl>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.aloha.querydsl.QuerydslApplication",
+      "projectName": "querydsl",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }
