@@ -24,4 +24,5 @@ public interface ProductRepositoryCustom {
   List<Product> searchByCriteria(
     String name, Integer minPrice, Integer maxPrice, Integer minStock
   );
+  
 }

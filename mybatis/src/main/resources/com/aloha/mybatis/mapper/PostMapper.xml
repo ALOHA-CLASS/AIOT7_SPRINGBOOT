@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- namespace="매퍼 인터페이스 경로" --> 
+<mapper namespace="com.aloha.mybatis.mapper.PostMapper">
+
+  <!-- 목록 -->
+  <select id="list" resultType="Posts">
+    SELECT *
+    FROM posts
+  </select>
+
+  <!-- 조회 -->
+  <select id="select" resultType="Posts">
+    SELECT *
+    FROM posts
+    WHERE no = #{no}
+  </select>
+
+  <!-- 등록 -->
+  <insert id="insert">
+      INSERT INTO posts ( id, title, writer, content )
+      VALUES ( #{id}, #{title}, #{writer}, #{content} )
+  </insert>
+
+  <!-- 수정 -->
+  <update id="update">
+      UPDATE posts
+          SET title = #{title}
+            ,writer = #{writer}
+            ,content = #{content}
+      WHERE no = #{no}
+  </update>
+
+  <!-- 삭제 -->
+  <delete id="delete">
+      DELETE FROM posts WHERE no = #{no}
+  </delete>
+
+</mapper>
